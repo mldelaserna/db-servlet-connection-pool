@@ -1,4 +1,4 @@
-# db-servlet
+# db-servlet-connection-pool
 An example of a simple servlets application working with the
 
 <del>JBoss Web Server 3.1 Apache Tomcat 8 (non existign now)
@@ -11,24 +11,12 @@ together with
 
 on OpenShift.
 
+We use the automaticaly created connection pool
 
-See the database settings in
+See how we creat the connetion in
 
-`src/lu/lllc/DBInfo.java`
+`src/lu/lllc/DBConnection.java`
 
-
-> user = "root";
-
-> password = "root";
-
-Rememer to set the passowrd of the root user to be root during configuration of
-
-`MySQL` 
-
-on Openshift 
-
-The database name is
-`lllc`
 
 The SQL file you can find in 
 
