@@ -34,8 +34,8 @@ public class ListProducts extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		ArrayList<Book> bookList = new ArrayList<Book>();
 		// Adding the (at this moment empty) bookList to the session
@@ -45,19 +45,8 @@ public class ListProducts extends HttpServlet {
 		Statement statement;
 		ResultSet result = null;
 
-		String dbURL = DBInfo.getDBURL();
-		String user = DBInfo.getUser();
-		String password = DBInfo.getPassword();
-
 		try {
-
-			Class.forName(DBInfo.getDriver());
-		} catch (ClassNotFoundException e) {
-			System.out.println("Error. Driver class not found: " + e);
-		}
-
-		try {
-			connection = DriverManager.getConnection(dbURL, user, password);
+			connection = DBConnection.getConnection();
 		} catch (SQLException e) {
 			System.out.println("Error. Connection problem: " + e);
 			return;
@@ -106,8 +95,7 @@ public class ListProducts extends HttpServlet {
 			return;
 		}
 
-		RequestDispatcher disp = request
-				.getRequestDispatcher("/WEB-INF/showBookList.jsp");
+		RequestDispatcher disp = request.getRequestDispatcher("/WEB-INF/showBookList.jsp");
 		disp.forward(request, response);
 
 	}
@@ -116,8 +104,8 @@ public class ListProducts extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		doGet(request, response);
 	}
 

@@ -42,19 +42,10 @@ public class AddProduct extends HttpServlet {
 		String description = request.getParameter("description");
 		float price = Float.parseFloat(request.getParameter("price"));
 		
-		String dbURL = DBInfo.getDBURL();
-		String user = DBInfo.getUser();
-		String password = DBInfo.getPassword();
-
-		try {
-
-			Class.forName(DBInfo.getDriver());
-		} catch (ClassNotFoundException e) {
-			System.out.println("Error. Driver class not found: " + e);
-		}
+		
 		
 		try {
-			connection = DriverManager.getConnection(dbURL, user, password);
+			connection = DBConnection.getConnection();
 		} catch (SQLException e) {
 			System.out.println("Error. Connection problem: " + e);
 			return;
