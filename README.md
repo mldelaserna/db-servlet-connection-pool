@@ -11,9 +11,9 @@ together with
 
 on OpenShift.
 
-We use the automaticalu created connection pool
+We use the automaticaly created connection pool
 
-See the conetion creating
+See how we creat the connetion in
 
 `src/lu/lllc/DBConnection.java`
 
