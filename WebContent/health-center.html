@@ -2,10 +2,14 @@
 <html>
 <head>
 	<title>Home Page | Profile Management System</title>
-	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/dataTables.jqueryui.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
 
 	<script src="./assets/js/jquery-3.3.1.min.js" defer></script>
+	<script src="./assets/js/jquery.dataTables.min.js" defer></script>
+	<script src="./assets/js/dataTables.jqueryui.min.js" defer></script>
 	<script type="text/javascript" src="./assets/js/main.js" defer></script>
 </head>
 <body>
@@ -55,6 +59,7 @@
 				<h1>Medicine Management and Tracking System</h1>
 				<span>Profile Management System</span>
 			</div>
+				
 		</div><!-- /header title -->
 			
 	</header>
@@ -64,6 +69,7 @@
 		<div class="container">
 			<div class="main__header">
 				<span>Admin</span>
+				<div>Caloocan</div>
 			</div>
 			<div class="main__container">
 
@@ -76,7 +82,7 @@
 								<i class="fas fa-caret-right"></i>
 							</a>
 							<div class="sidebar__submenu">
-								<ul class="open">
+								<ul class="">
 									<li>
 										<a href="">Metro Manila</a>
 									</li>
@@ -107,8 +113,98 @@
 
 				<!-- main content -->
 				<div class="main_content">
-					<div class="banner_img">
-						<img src="./assets/img/banner-pms.jpeg" alt="">
+					<div class="main_content__title">
+						<span>Health Centers: 3</span>
+						<span>Total Population:6001</span>
+					</div>
+
+					<div class="tbl">
+						<div class="tbl__actions">
+							<div class="tbl__actions_search">
+								<span>Search:</span>
+								<div class="search_input"> 
+									<input type="text" name="" placeholder="Name">
+									<div class="search_input__btns">
+										<a href="" class="btn--icon"><i class="fas fa-search"></i></a>
+										<a href="" class="btn--icon"><i class="fas fa-sync-alt"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="tbl__actions_btn">
+								<button type="submit" class="btn">
+									<i class="fas fa-plus"></i>
+									New
+								</button>
+								<button class="btn">
+									<i class="fas fa-times"></i>
+									Delete
+								</button>
+							</div>
+						</div>
+						<table id="healthCenter" class="tbl">
+							<thead>
+								<tr>
+									<th></th>
+									<th class="id">ID</th>
+									<th class="name">Name</th>
+									<th class="population">Population</th>
+									<th class="status">
+										Status <br>
+										<div class="flex_container">
+											<p>All</p>
+											<p>Active</p>
+											<p>Archived</p>
+										</div>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<input type="checkbox" name="">
+									</td>
+									<td>text</td>
+									<td>text</td>
+									<td>text</td>
+									<td class="tbl__row_actions">
+										<span>Active</span>
+										<div class="table__buttons">
+											<a href=""><i class="fas fa-pen"></i></a>
+											<a href=""><i class="fas fa-search"></i></a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" name="">
+									</td>
+									<td>text 1</td>
+									<td>text 2</td>
+									<td>text 3</td>
+									<td class="tbl__row_actions">
+										<span>Active</span>
+										<div class="table__buttons">
+											<a href=""><i class="fas fa-pen"></i></a>
+											<a href=""><i class="fas fa-search"></i></a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" name="">
+									</td>
+									<td>text 1</td>
+									<td>text 2</td>
+									<td>text 3</td>
+									<td class="tbl__row_actions">
+										<span>Active</span>
+										<div class="table__buttons">
+											<a href=""><i class="fas fa-pen"></i></a>
+											<a href=""><i class="fas fa-search"></i></a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div><!-- /main content -->
 			</div>
