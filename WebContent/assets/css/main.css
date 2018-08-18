@@ -33,6 +33,14 @@ common
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: all 0.25s ease;
+	border: 1px solid #5cb8f9;
+}
+
+.btn:hover {
+	border: 1px solid #5cb8f9;
+	color: #5cb8f9;
+	background-color: #fff;
 }
 
 .btn--primary {
@@ -261,6 +269,7 @@ ul.sidebar__menu li a {
 	top: 0;
 	width: 200px;
 	height: auto;
+	z-index: 2;
 }
 
 .sidebar__submenu ul {
@@ -270,7 +279,7 @@ ul.sidebar__menu li a {
 	list-style-type: none;
 }
 
-.sidebar__submenu ul.open {
+.sidebar__menu li.open .sidebar__submenu ul {
 	display: block;
 }
 
