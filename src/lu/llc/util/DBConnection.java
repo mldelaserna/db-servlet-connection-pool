@@ -1,4 +1,4 @@
-package lu.lllc;
+package lu.llc.util;
 
 import java.sql.*;
 

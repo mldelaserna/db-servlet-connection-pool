@@ -2,10 +2,14 @@
 <html>
 <head>
 	<title>Home Page | Profile Management System</title>
-	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/dataTables.jqueryui.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
 
 	<script src="./assets/js/jquery-3.3.1.min.js" defer></script>
+	<script src="./assets/js/jquery.dataTables.min.js" defer></script>
+	<script src="./assets/js/dataTables.jqueryui.min.js" defer></script>
 	<script type="text/javascript" src="./assets/js/main.js" defer></script>
 </head>
 <body>
@@ -15,7 +19,7 @@
 		<nav>
 			<ul class="main_nav">
 				<li>
-					<a href="index.html">
+					<a href="home.html">
 						<i class="fas fa-home"></i>
 						<span>Home</span>
 					</a>
@@ -85,6 +89,7 @@
 				<h1>Medicine Management and Tracking System</h1>
 				<span>Profile Management System</span>
 			</div>
+				
 		</div><!-- /header title -->
 			
 	</header>
@@ -94,6 +99,7 @@
 		<div class="container">
 			<div class="main__header">
 				<span>Admin</span>
+				<div>Caloocan</div>
 			</div>
 			<div class="main__container">
 
@@ -102,44 +108,121 @@
 					<ul class="sidebar__menu">
 						<li>
 							<a href="">
-								<span>NCR</span>
-								<i class="fas fa-caret-right"></i>
+								<i class="fas fa-briefcase-medical"></i>
+								<span>Family Registration</span>
 							</a>
-							<div class="sidebar__submenu">
-								<ul>
-									<li>
-										<a href="">Metro Manila</a>
-									</li>
-									<li>
-										<a href="">Makati</a>
-									</li>
-								</ul>
-							</div>
 						</li>
 						<li>
 							<a href="">
-								<span>CAR</span>
-								<i class="fas fa-caret-right"></i>
+								<i class="fas fa-bars"></i>
+								<span>Patient Queue</span>
 							</a>
-							<div class="sidebar__submenu">
-								<ul>
-									<li>
-										<a href="">Baguio</a>
-									</li>
-									<li>
-										<a href="">Benguet</a>
-									</li>
-								</ul>
-							</div>
+						</li>
+						<li>
+							<a href="">
+								<i class="fas fa-search"></i>
+								<span>Patient Search</span>
+							</a>
 						</li>
 					</ul>
 				</div><!-- /sidebar -->
 
 				<!-- main content -->
 				<div class="main_content">
-					<div class="banner_img">
-						<img src="./assets/img/banner-pms.jpeg" alt="">
-					</div>	
+					<div class="main_content__title">
+						<span>Health Centers: 2</span>
+						<span>Total Population:60021</span>
+					</div>
+
+					<div class="tbl">
+						<div class="tbl__actions">
+							<div class="tbl__actions_search">
+								<span>Search:</span>
+								<div class="search_input"> 
+									<input type="text" name="" placeholder="Name">
+									<div class="search_input__btns">
+										<a href="" class="btn--icon"><i class="fas fa-search"></i></a>
+										<a href="" class="btn--icon"><i class="fas fa-sync-alt"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="tbl__actions_btn">
+								<button type="submit" class="btn">
+									<i class="fas fa-plus"></i>
+									New
+								</button>
+								<button class="btn">
+									<i class="fas fa-times"></i>
+									Delete
+								</button>
+							</div>
+						</div>
+						<table id="healthCenter" class="tbl">
+							<thead>
+								<tr>
+									<th></th>
+									<th class="id">ID</th>
+									<th class="name">Name</th>
+									<th class="population">Population</th>
+									<th class="status">
+										Status <br>
+										<div class="flex_container">
+											<p>All</p>
+											<p>Active</p>
+											<p>Archived</p>
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<input type="checkbox" name="">
+									</td>
+									<td>10000</td>
+									<td>Calaanan Health Center</td>
+									<td>6100</td>
+									<td class="tbl__row_actions">
+										<span>Active</span>
+										<div class="table__buttons">
+											<a href=""><i class="fas fa-pen"></i></a>
+											<a href=""><i class="fas fa-search"></i></a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" name="">
+									</td>
+									<td>10001</td>
+									<td>Mapua Health Center</td>
+									<td>3891</td>
+									<td class="tbl__row_actions">
+										<span>Active</span>
+										<div class="table__buttons">
+											<a href=""><i class="fas fa-pen"></i></a>
+											<a href=""><i class="fas fa-search"></i></a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" name="">
+									</td>
+									<td>text 1</td>
+									<td>text 2</td>
+									<td>text 3</td>
+									<td class="tbl__row_actions">
+										<span>Active</span>
+										<div class="table__buttons">
+											<a href=""><i class="fas fa-pen"></i></a>
+											<a href=""><i class="fas fa-search"></i></a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div><!-- /main content -->
 			</div>
 				

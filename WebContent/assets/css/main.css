@@ -263,6 +263,42 @@ ul.sidebar__menu li a {
 	color: #fff;
 }
 
+ul.sidebar__menu2 {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	display: block;
+	width: 100%;
+}
+
+ul.sidebar__menu2 li {
+	position: relative;
+	border-bottom: 1px solid;
+	color: #fff;
+	background-color: #346ac1;
+}
+
+ul.sidebar__menu2 li::after {
+	content: '';
+	position: absolute;
+	right: 12px;
+	top: calc(50% - 6px);
+}
+
+ul.sidebar__menu2 li a {
+	padding: 0 12px;
+	height: 50px;
+	width: 100%;
+	display: block;
+	display: flex;
+	align-items: center;
+	color: #fff;
+}
+
+ul.sidebar__menu2 li span {
+	margin-left: 10px;
+}
+
 .sidebar__submenu {
 	position: absolute;
 	left: 251px;

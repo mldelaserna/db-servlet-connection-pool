@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home Page | Profile Management System</title>
-	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+	<title>Patient | Profile Management System</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/dataTables.jqueryui.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
 
 	<script src="./assets/js/jquery-3.3.1.min.js" defer></script>
+	<script src="./assets/js/jquery.dataTables.min.js" defer></script>
+	<script src="./assets/js/dataTables.jqueryui.min.js" defer></script>
 	<script type="text/javascript" src="./assets/js/main.js" defer></script>
 </head>
 <body>
@@ -85,6 +89,7 @@
 				<h1>Medicine Management and Tracking System</h1>
 				<span>Profile Management System</span>
 			</div>
+				
 		</div><!-- /header title -->
 			
 	</header>
@@ -94,52 +99,130 @@
 		<div class="container">
 			<div class="main__header">
 				<span>Admin</span>
+				<div>Caloocan</div>
 			</div>
 			<div class="main__container">
 
 				<!-- sidebar -->
 				<div class="sidebar">
-					<ul class="sidebar__menu">
+					<ul class="sidebar__menu2">
 						<li>
 							<a href="">
-								<span>NCR</span>
-								<i class="fas fa-caret-right"></i>
+								<i class="fas fa-briefcase-medical"></i>
+								<span>Family Registration</span>
 							</a>
-							<div class="sidebar__submenu">
-								<ul>
-									<li>
-										<a href="">Metro Manila</a>
-									</li>
-									<li>
-										<a href="">Makati</a>
-									</li>
-								</ul>
-							</div>
 						</li>
 						<li>
 							<a href="">
-								<span>CAR</span>
-								<i class="fas fa-caret-right"></i>
+								<i class="fas fa-bars"></i>
+								<span>Patient Queue</span>
 							</a>
-							<div class="sidebar__submenu">
-								<ul>
-									<li>
-										<a href="">Baguio</a>
-									</li>
-									<li>
-										<a href="">Benguet</a>
-									</li>
-								</ul>
-							</div>
 						</li>
+						<li>
+							<a href="">
+								<i class="fas fa-search"></i>
+								<span>Patient Search</span>
+							</a>
+						</li>
+						
 					</ul>
 				</div><!-- /sidebar -->
 
 				<!-- main content -->
 				<div class="main_content">
-					<div class="banner_img">
-						<img src="./assets/img/banner-pms.jpeg" alt="">
-					</div>	
+
+					<div class="tbl">
+						<div class="tbl__actions">
+							<div class="tbl__actions_search">
+								<span>Search:</span>
+								<div class="search_input"> 
+									<input type="text" name="" placeholder="Name">
+									<div class="search_input__btns">
+										<a href="" class="btn--icon"><i class="fas fa-search"></i></a>
+										<a href="" class="btn--icon"><i class="fas fa-sync-alt"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="tbl__actions_btn">
+								<button type="submit" class="btn">
+									<i class="fas fa-plus"></i>
+									New
+								</button>
+								<button class="btn">
+									<i class="fas fa-times"></i>
+									Delete
+								</button>
+							</div>
+						</div>
+						<table id="healthCenter" class="tbl">
+							<thead>
+								<tr>
+									<th></th>
+									<th class="id">ID</th>
+									<th class="name">Name</th>
+									<th class="name">Family ID</th>
+									<th class="name">Barangay</th>
+									<th class="status">
+										Status <br>
+										<div class="flex_container">
+											<p>All</p>
+											<p>Active</p>
+											<p>Archived</p>
+										</div>
+									</th>									
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<input type="checkbox" name="">
+									</td>
+									<td>10000</td>
+									<td>Luis Karong</td>
+									<td> 100000 </td>
+									<td> Barangay 73 </td>
+									<td class="tbl__row_actions">
+										<span>Active</span>
+										<div class="table__buttons">
+											<a href=""><i class="fas fa-pen"></i></a>
+											<a href=""><i class="fas fa-search"></i></a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" name="">
+									</td>
+									<td>100001</td>
+									<td>Garry Santos</td>
+									<td> 100005 </td>
+									<td> Barangay 73 </td>
+									<td class="tbl__row_actions">
+										<span>Active</span>
+										<div class="table__buttons">
+											<a href=""><i class="fas fa-pen"></i></a>
+											<a href=""><i class="fas fa-search"></i></a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" name="">
+									</td>
+									<td>text 1</td>
+									<td>text 2</td>
+									<td>text 3</td>
+									<td> </td>
+									<td class="tbl__row_actions">
+										<span>Active</span>
+										<div class="table__buttons">
+											<a href=""><i class="fas fa-pen"></i></a>
+											<a href=""><i class="fas fa-search"></i></a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div><!-- /main content -->
 			</div>
 				

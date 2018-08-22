@@ -1,4 +1,4 @@
-package lu.lllc;
+package lu.llc.model;
 
 import java.io.Serializable;
 
